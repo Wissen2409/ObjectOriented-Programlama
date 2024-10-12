@@ -62,6 +62,8 @@ Console.WriteLine("Yaş : {0}",ogrenci1.age);
 
 // 4 adet öğrenci nesnesi üretip, bir dizi içerisine yerleştirelim
 
+using System.Collections;
+
 Ogrenci ogrenci1=new Ogrenci();
 ogrenci1.name="Pınar";
 ogrenci1.lastname="Demirtaş";
@@ -97,6 +99,10 @@ ogrenciler[3]=ogrenci4;
 // Örnek : öğrenci tipindeki bir diziye bir int değer atamaya çalışalım 
 // Cevap : Ogrenci tipinden bir dizi içerisine başka tipte bir dğer veremezsiniz
 
+
+// dizinin yer elemanı artık bizim için ogrenci nesnesidir
+// dizinin 0. elemanının üzerinden yaş değerini değiştirelim
+
 // Ögrenci dizisini ekrana yazdıralım 
 // 1 : Foreach ile yazdıralım
 foreach(Ogrenci ogr in ogrenciler){
@@ -107,6 +113,38 @@ foreach(Ogrenci ogr in ogrenciler){
 
 // 2 : For ile yazdıralım
 
+for(int i =0;i<ogrenciler.Length;i++){
+
+    // Çözüm 1 : 
+    //Console.WriteLine("Ad : {0} Soyad : {1} Yaş :{2}",ogrenciler[i].name,ogrenciler[i].lastname,ogrenciler[i].age);
+
+    // Çözüm 2
+    // Çözüm 2 performans olarak bir önceki yönteme göre daha mantıklı kalacaktır.
+    Ogrenci geciciOgrenci = ogrenciler[i];
+    Console.WriteLine("Ad : {0} Soyad : {1} Yaş :{2}",geciciOgrenci.name,geciciOgrenci.lastname,geciciOgrenci.age);
+
+    
+}
 
 
 
+
+// Yukarıdaki ogrenci isimli nesneleri, SortedList koleksiyonu içerisine yerleştirip, sonrasında 
+// foreach ile ekrana yazdırınız
+
+SortedList ogrenciListesi = new SortedList();
+ogrenciListesi.Add(1,ogrenci1);
+ogrenciListesi.Add(2,ogrenci2);
+ogrenciListesi.Add(3,ogrenci3);
+ogrenciListesi.Add(4,ogrenci4);
+// Ogrenci nesneleri sortedlist içerisine eklendiler.
+
+// Ekrana yazdırmak
+
+foreach(DictionaryEntry item in ogrenciListesi){
+
+    // Ogrenci nesneleri, item.value diye erişilir
+   Ogrenci selectedOgrenci =  ((Ogrenci)item.Value);
+   Console.WriteLine("Sıra No : {3} Ad : {0} Soyad :{1} Yaş : {2}",selectedOgrenci.name,selectedOgrenci.lastname,selectedOgrenci.age,item.Key);
+}
+// Okey : yarın sınıf ve nesnelerden devam!!!
