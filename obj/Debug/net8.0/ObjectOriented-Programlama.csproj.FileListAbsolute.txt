@@ -1,0 +1,14 @@
+/Users/emrahelis/ObjectOriented-Programlama/bin/Debug/net8.0/ObjectOriented-Programlama
+/Users/emrahelis/ObjectOriented-Programlama/bin/Debug/net8.0/ObjectOriented-Programlama.deps.json
+/Users/emrahelis/ObjectOriented-Programlama/bin/Debug/net8.0/ObjectOriented-Programlama.runtimeconfig.json
+/Users/emrahelis/ObjectOriented-Programlama/bin/Debug/net8.0/ObjectOriented-Programlama.dll
+/Users/emrahelis/ObjectOriented-Programlama/bin/Debug/net8.0/ObjectOriented-Programlama.pdb
+/Users/emrahelis/ObjectOriented-Programlama/obj/Debug/net8.0/ObjectOriented-Programlama.GeneratedMSBuildEditorConfig.editorconfig
+/Users/emrahelis/ObjectOriented-Programlama/obj/Debug/net8.0/ObjectOriented-Programlama.AssemblyInfoInputs.cache
+/Users/emrahelis/ObjectOriented-Programlama/obj/Debug/net8.0/ObjectOriented-Programlama.AssemblyInfo.cs
+/Users/emrahelis/ObjectOriented-Programlama/obj/Debug/net8.0/ObjectOriented-Programlama.csproj.CoreCompileInputs.cache
+/Users/emrahelis/ObjectOriented-Programlama/obj/Debug/net8.0/ObjectOriented-Programlama.dll
+/Users/emrahelis/ObjectOriented-Programlama/obj/Debug/net8.0/refint/ObjectOriented-Programlama.dll
+/Users/emrahelis/ObjectOriented-Programlama/obj/Debug/net8.0/ObjectOriented-Programlama.pdb
+/Users/emrahelis/ObjectOriented-Programlama/obj/Debug/net8.0/ObjectOriented-Programlama.genruntimeconfig.cache
+/Users/emrahelis/ObjectOriented-Programlama/obj/Debug/net8.0/ref/ObjectOriented-Programlama.dll
