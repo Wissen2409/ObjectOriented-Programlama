@@ -26,3 +26,10 @@ public class Ogrenci{
     public int age;
     
 }
+
+// bir sınıf yazmak için, illaki bir dosya açmaya gerek yok
+// aynı dosya ilçerisinde istediğiniz kadar class yazabilirsiniz
+public class Ogretmen{
+
+
+}

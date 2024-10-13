@@ -64,25 +64,25 @@ Console.WriteLine("Yaş : {0}",ogrenci1.age);
 
 using System.Collections;
 
-Ogrenci ogrenci1=new Ogrenci();
-ogrenci1.name="Pınar";
-ogrenci1.lastname="Demirtaş";
-ogrenci1.age=23;
+Ogrenci ogrenci1 = new Ogrenci();
+ogrenci1.name = "Pınar";
+ogrenci1.lastname = "Demirtaş";
+ogrenci1.age = 23;
 
-Ogrenci ogrenci2=new Ogrenci();
-ogrenci2.name="Murat";
-ogrenci2.lastname="Dedekoca";
-ogrenci2.age=10;
+Ogrenci ogrenci2 = new Ogrenci();
+ogrenci2.name = "Murat";
+ogrenci2.lastname = "Dedekoca";
+ogrenci2.age = 10;
 
-Ogrenci ogrenci3=new Ogrenci();
-ogrenci3.name="Hilmi";
-ogrenci3.lastname="Kanat";
-ogrenci3.age=40;
+Ogrenci ogrenci3 = new Ogrenci();
+ogrenci3.name = "Hilmi";
+ogrenci3.lastname = "Kanat";
+ogrenci3.age = 40;
 
-Ogrenci ogrenci4=new Ogrenci();
-ogrenci4.name="Büşra";
-ogrenci4.lastname="Sarı";
-ogrenci4.age=10;
+Ogrenci ogrenci4 = new Ogrenci();
+ogrenci4.name = "Büşra";
+ogrenci4.lastname = "Sarı";
+ogrenci4.age = 10;
 
 // Bu 4 öğrenci nesnesini bir dizi içerisinde yerleştirelim
 
@@ -90,10 +90,10 @@ Ogrenci[] ogrenciler = new Ogrenci[4];
 
 
 // Ogrenci dizisi içerisinde Ogrenci nesnelerini yerleştirelim 
-ogrenciler[0]=ogrenci1;
-ogrenciler[1]=ogrenci2;
-ogrenciler[2]=ogrenci3;
-ogrenciler[3]=ogrenci4;
+ogrenciler[0] = ogrenci1;
+ogrenciler[1] = ogrenci2;
+ogrenciler[2] = ogrenci3;
+ogrenciler[3] = ogrenci4;
 // Ogrenciler  adındaki, Ogrenci tipindeki dizi, içerisine sadece öğrenci nesneleri alır
 
 // Örnek : öğrenci tipindeki bir diziye bir int değer atamaya çalışalım 
@@ -105,15 +105,17 @@ ogrenciler[3]=ogrenci4;
 
 // Ögrenci dizisini ekrana yazdıralım 
 // 1 : Foreach ile yazdıralım
-foreach(Ogrenci ogr in ogrenciler){
+foreach (Ogrenci ogr in ogrenciler)
+{
 
-    Console.WriteLine("Ad : {0} Soyad : {1} - Yaş : {2}",ogr.name,ogr.lastname,ogr.age);
+    Console.WriteLine("Ad : {0} Soyad : {1} - Yaş : {2}", ogr.name, ogr.lastname, ogr.age);
 }
 
 
 // 2 : For ile yazdıralım
 
-for(int i =0;i<ogrenciler.Length;i++){
+for (int i = 0; i < ogrenciler.Length; i++)
+{
 
     // Çözüm 1 : 
     //Console.WriteLine("Ad : {0} Soyad : {1} Yaş :{2}",ogrenciler[i].name,ogrenciler[i].lastname,ogrenciler[i].age);
@@ -121,9 +123,9 @@ for(int i =0;i<ogrenciler.Length;i++){
     // Çözüm 2
     // Çözüm 2 performans olarak bir önceki yönteme göre daha mantıklı kalacaktır.
     Ogrenci geciciOgrenci = ogrenciler[i];
-    Console.WriteLine("Ad : {0} Soyad : {1} Yaş :{2}",geciciOgrenci.name,geciciOgrenci.lastname,geciciOgrenci.age);
+    Console.WriteLine("Ad : {0} Soyad : {1} Yaş :{2}", geciciOgrenci.name, geciciOgrenci.lastname, geciciOgrenci.age);
 
-    
+
 }
 
 
@@ -133,18 +135,68 @@ for(int i =0;i<ogrenciler.Length;i++){
 // foreach ile ekrana yazdırınız
 
 SortedList ogrenciListesi = new SortedList();
-ogrenciListesi.Add(1,ogrenci1);
-ogrenciListesi.Add(2,ogrenci2);
-ogrenciListesi.Add(3,ogrenci3);
-ogrenciListesi.Add(4,ogrenci4);
+ogrenciListesi.Add(1, ogrenci1);
+ogrenciListesi.Add(2, ogrenci2);
+ogrenciListesi.Add(3, ogrenci3);
+ogrenciListesi.Add(4, ogrenci4);
 // Ogrenci nesneleri sortedlist içerisine eklendiler.
 
 // Ekrana yazdırmak
 
-foreach(DictionaryEntry item in ogrenciListesi){
+foreach (DictionaryEntry item in ogrenciListesi)
+{
 
     // Ogrenci nesneleri, item.value diye erişilir
-   Ogrenci selectedOgrenci =  ((Ogrenci)item.Value);
-   Console.WriteLine("Sıra No : {3} Ad : {0} Soyad :{1} Yaş : {2}",selectedOgrenci.name,selectedOgrenci.lastname,selectedOgrenci.age,item.Key);
+    Ogrenci selectedOgrenci = (Ogrenci)item.Value;
+    Console.WriteLine("Sıra No : {3} Ad : {0} Soyad :{1} Yaş : {2}", selectedOgrenci.name, selectedOgrenci.lastname, selectedOgrenci.age, item.Key);
 }
 // Okey : yarın sınıf ve nesnelerden devam!!!
+
+// Product sınıfı yazıp, içerisinde 5 tane değişken tanımlayın
+// sonrasında product sıfından 5 adet nesne örneği alıp, ekrana yazdırınız
+
+
+
+// Product sınıfından nesneler üretelim ve diziye yerleştirelim 
+
+// Farklı nesne tanımlama yöntemi!!!!
+
+
+Product[] products = new Product[5];
+products[0] = new Product()
+{
+    date = DateTime.Now.AddDays(1),
+    description = "İyi araba iyi fiyat",
+    id = 1,
+    name = "Audi",
+    price = 18000
+};
+
+products[1] = new Product()
+{
+    id = 2,
+    date = DateTime.Now.AddDays(34),
+    description = "Rengi çok güzel",
+    name = "BMW",
+    price = 64000
+
+};
+
+products[2] = new Product()
+{
+
+    id = 3,
+    date = DateTime.Now.AddDays(5),
+    description = "Fiyastına göre mükemmel",
+    name = "Peugeot",
+    price = 12000
+};
+
+// Ekrana yazdıralım 
+
+foreach(var item in products){
+
+    
+}
+// Eğer, bir product dizisi içerisinde, bir index'e değer vermezsek
+// o indeks null(veri yok) değer taşır
